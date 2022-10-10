@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\git\\CustomDataStructures\\CustomDataStructures.Tests\\DataStructures.Tests.csproj": {}
+    "C:\\git\\CustomDataStructures\\DataStructures.Tests\\DataStructures.Tests.csproj": {}
   },
   "projects": {
-    "C:\\git\\CustomDataStructures\\CustomDataStructures.Tests\\DataStructures.Tests.csproj": {
+    "C:\\git\\CustomDataStructures\\DataStructures.Tests\\DataStructures.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\git\\CustomDataStructures\\CustomDataStructures.Tests\\DataStructures.Tests.csproj",
+        "projectUniqueName": "C:\\git\\CustomDataStructures\\DataStructures.Tests\\DataStructures.Tests.csproj",
         "projectName": "DataStructures.Tests",
-        "projectPath": "C:\\git\\CustomDataStructures\\CustomDataStructures.Tests\\DataStructures.Tests.csproj",
+        "projectPath": "C:\\git\\CustomDataStructures\\DataStructures.Tests\\DataStructures.Tests.csproj",
         "packagesPath": "C:\\Users\\nikor\\.nuget\\packages\\",
-        "outputPath": "C:\\git\\CustomDataStructures\\CustomDataStructures.Tests\\obj\\",
+        "outputPath": "C:\\git\\CustomDataStructures\\DataStructures.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nikor\\AppData\\Roaming\\NuGet\\NuGet.Config",

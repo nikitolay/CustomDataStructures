@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bzM9WKVyeSw0pvX+U5tUyO7CiD7yK4obiwFqDTewDNTf+FhlO/19UZc1KQI7BhghymAAJ75c1OSGtIHxCyPs9A==",
+  "dgSpecHash": "xICzvCoJOWzpGdUjgF99wPgOCoL8aMoGenwRFr36y0p9k4y+B1aHmxgDni5g0b81v+f5QClqjUYr+lmW8BaLxw==",
   "success": true,
-  "projectFilePath": "C:\\git\\CustomDataStructures\\CustomDataStructures.Tests\\DataStructures.Tests.csproj",
+  "projectFilePath": "C:\\git\\CustomDataStructures\\DataStructures.Tests\\DataStructures.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nikor\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\nikor\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",

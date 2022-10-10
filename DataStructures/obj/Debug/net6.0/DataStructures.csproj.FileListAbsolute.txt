@@ -1,0 +1,12 @@
+C:\git\CustomDataStructures\DataStructures\bin\Debug\net6.0\DataStructures.deps.json
+C:\git\CustomDataStructures\DataStructures\bin\Debug\net6.0\DataStructures.dll
+C:\git\CustomDataStructures\DataStructures\bin\Debug\net6.0\DataStructures.pdb
+C:\git\CustomDataStructures\DataStructures\obj\Debug\net6.0\DataStructures.csproj.AssemblyReference.cache
+C:\git\CustomDataStructures\DataStructures\obj\Debug\net6.0\DataStructures.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\CustomDataStructures\DataStructures\obj\Debug\net6.0\DataStructures.AssemblyInfoInputs.cache
+C:\git\CustomDataStructures\DataStructures\obj\Debug\net6.0\DataStructures.AssemblyInfo.cs
+C:\git\CustomDataStructures\DataStructures\obj\Debug\net6.0\DataStructures.csproj.CoreCompileInputs.cache
+C:\git\CustomDataStructures\DataStructures\obj\Debug\net6.0\DataStructures.dll
+C:\git\CustomDataStructures\DataStructures\obj\Debug\net6.0\refint\DataStructures.dll
+C:\git\CustomDataStructures\DataStructures\obj\Debug\net6.0\DataStructures.pdb
+C:\git\CustomDataStructures\DataStructures\obj\Debug\net6.0\ref\DataStructures.dll

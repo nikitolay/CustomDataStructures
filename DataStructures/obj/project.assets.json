@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\git\\CustomDataStructures\\CustomDataStructures\\DataStructures\\DataStructures.csproj",
+      "projectUniqueName": "C:\\git\\CustomDataStructures\\DataStructures\\DataStructures.csproj",
       "projectName": "DataStructures",
-      "projectPath": "C:\\git\\CustomDataStructures\\CustomDataStructures\\DataStructures\\DataStructures.csproj",
+      "projectPath": "C:\\git\\CustomDataStructures\\DataStructures\\DataStructures.csproj",
       "packagesPath": "C:\\Users\\nikor\\.nuget\\packages\\",
-      "outputPath": "C:\\git\\CustomDataStructures\\CustomDataStructures\\DataStructures\\obj\\",
+      "outputPath": "C:\\git\\CustomDataStructures\\DataStructures\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nikor\\AppData\\Roaming\\NuGet\\NuGet.Config",

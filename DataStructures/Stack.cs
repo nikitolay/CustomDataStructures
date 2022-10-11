@@ -1,12 +1,13 @@
-﻿using System;
+﻿
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace DataStructures
 {
-    internal class Stack<T>
+    internal class Stack<T> 
     {
         private const int INITIAL_CAPACITY = 4;
         private T[] items;
@@ -17,8 +18,16 @@ namespace DataStructures
             items = new T[INITIAL_CAPACITY];
         }
         //TODO: Add more ctors
+        public Stack(int capacity)
+        {
+            items=new T[capacity];
+        }
 
-
+        public Stack(IEnumerable<T> collection)
+        {
+            //TODO: check if given to reference
+            items = collection.ToArray();
+        }
 
         public int Count { get; private set; }
 
@@ -26,7 +35,7 @@ namespace DataStructures
         {
             if (items.Length == Count)
             {
-                Resize();
+                Grow();
             }
             items[Count++] = element;
         }
@@ -71,7 +80,7 @@ namespace DataStructures
             items = copyItems;
         }
 
-        private void Resize()
+        private void Grow()
         {
             T[] copyItems = new T[items.Length * 2];
             for (int i = 0; i < items.Length; i++)
@@ -84,6 +93,6 @@ namespace DataStructures
             //items=copyItems;
         }
 
-
+    
     }
 }

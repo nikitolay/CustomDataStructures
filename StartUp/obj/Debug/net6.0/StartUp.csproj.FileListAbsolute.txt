@@ -1,0 +1,15 @@
+C:\git\CustomDataStructures\StartUp\bin\Debug\net6.0\StartUp.exe
+C:\git\CustomDataStructures\StartUp\bin\Debug\net6.0\StartUp.deps.json
+C:\git\CustomDataStructures\StartUp\bin\Debug\net6.0\StartUp.runtimeconfig.json
+C:\git\CustomDataStructures\StartUp\bin\Debug\net6.0\StartUp.dll
+C:\git\CustomDataStructures\StartUp\bin\Debug\net6.0\StartUp.pdb
+C:\git\CustomDataStructures\StartUp\obj\Debug\net6.0\StartUp.csproj.AssemblyReference.cache
+C:\git\CustomDataStructures\StartUp\obj\Debug\net6.0\StartUp.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\CustomDataStructures\StartUp\obj\Debug\net6.0\StartUp.AssemblyInfoInputs.cache
+C:\git\CustomDataStructures\StartUp\obj\Debug\net6.0\StartUp.AssemblyInfo.cs
+C:\git\CustomDataStructures\StartUp\obj\Debug\net6.0\StartUp.csproj.CoreCompileInputs.cache
+C:\git\CustomDataStructures\StartUp\obj\Debug\net6.0\StartUp.dll
+C:\git\CustomDataStructures\StartUp\obj\Debug\net6.0\refint\StartUp.dll
+C:\git\CustomDataStructures\StartUp\obj\Debug\net6.0\StartUp.pdb
+C:\git\CustomDataStructures\StartUp\obj\Debug\net6.0\StartUp.genruntimeconfig.cache
+C:\git\CustomDataStructures\StartUp\obj\Debug\net6.0\ref\StartUp.dll

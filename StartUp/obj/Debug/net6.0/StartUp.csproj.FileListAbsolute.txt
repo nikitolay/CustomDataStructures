@@ -13,3 +13,6 @@ C:\git\CustomDataStructures\StartUp\obj\Debug\net6.0\refint\StartUp.dll
 C:\git\CustomDataStructures\StartUp\obj\Debug\net6.0\StartUp.pdb
 C:\git\CustomDataStructures\StartUp\obj\Debug\net6.0\StartUp.genruntimeconfig.cache
 C:\git\CustomDataStructures\StartUp\obj\Debug\net6.0\ref\StartUp.dll
+C:\git\CustomDataStructures\StartUp\bin\Debug\net6.0\DataStructures.dll
+C:\git\CustomDataStructures\StartUp\bin\Debug\net6.0\DataStructures.pdb
+C:\git\CustomDataStructures\StartUp\obj\Debug\net6.0\StartUp.csproj.CopyComplete

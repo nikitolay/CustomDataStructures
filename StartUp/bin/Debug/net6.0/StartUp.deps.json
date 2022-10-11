@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "StartUp/1.0.0": {
+        "dependencies": {
+          "DataStructures": "1.0.0"
+        },
         "runtime": {
           "StartUp.dll": {}
+        }
+      },
+      "DataStructures/1.0.0": {
+        "runtime": {
+          "DataStructures.dll": {}
         }
       }
     }
   },
   "libraries": {
     "StartUp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DataStructures/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

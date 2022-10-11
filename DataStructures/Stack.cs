@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace DataStructures
 {
-    internal class Stack<T> 
+    public class Stack<T> :IEnumerable<T>
     {
         private const int INITIAL_CAPACITY = 4;
         private T[] items;
@@ -17,7 +17,9 @@ namespace DataStructures
         {
             items = new T[INITIAL_CAPACITY];
         }
-        //TODO: Add more ctors
+
+ 
+
         public Stack(int capacity)
         {
             items=new T[capacity];
@@ -29,7 +31,15 @@ namespace DataStructures
             items = collection.ToArray();
         }
 
+
+
+        public T this[int i] => items[i];
+
+
+
+
         public int Count { get; private set; }
+
 
         public void Push(T element)
         {
@@ -93,6 +103,18 @@ namespace DataStructures
             //items=copyItems;
         }
 
-    
+        public IEnumerator<T> GetEnumerator()
+        {
+          
+            for (int i = Count - 1; i >= 0; i--)
+            {
+                yield return items[i];
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+           return GetEnumerator();
+        }
     }
 }

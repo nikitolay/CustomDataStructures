@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace DataStructures
 {
-    public class Stack<T> :IEnumerable<T>
+    public class Stack<T> : IEnumerable<T>, IEnumerable
     {
         private const int INITIAL_CAPACITY = 4;
         private T[] items;
@@ -18,11 +18,11 @@ namespace DataStructures
             items = new T[INITIAL_CAPACITY];
         }
 
- 
+
 
         public Stack(int capacity)
         {
-            items=new T[capacity];
+            items = new T[capacity];
         }
 
         public Stack(IEnumerable<T> collection)
@@ -80,12 +80,31 @@ namespace DataStructures
             return element;
         }
 
+        public void TrimExcess()
+        {
+            int num = (int)(items.Length * 0.9);
+            if (Count >= num)
+            {
+                return;
+            }
+            else
+            {
+
+                T[] copyItems = new T[num];
+                for (int i = 0; i < Count; i++)
+                {
+                    copyItems[i] = items[i];
+                }
+
+                items = copyItems;
+            }
+        }
         private void Shrink()
         {
             T[] copyItems = new T[items.Length / 2];
             for (int i = 0; i < Count; i++)
             {
-                copyItems[i]=items[i];
+                copyItems[i] = items[i];
             }
             items = copyItems;
         }
@@ -105,7 +124,7 @@ namespace DataStructures
 
         public IEnumerator<T> GetEnumerator()
         {
-          
+
             for (int i = Count - 1; i >= 0; i--)
             {
                 yield return items[i];
@@ -114,7 +133,7 @@ namespace DataStructures
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-           return GetEnumerator();
+            return GetEnumerator();
         }
     }
 }

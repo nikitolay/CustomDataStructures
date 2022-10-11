@@ -10,7 +10,7 @@ namespace StartUp
            Stack<int> stack2 = new Stack<int>();
             stack2.Push(1);
             stack2.Push(6);
-
+            stack2.TrimExcess();
             //stack.Push((int)Enumerable.Range(10,50));
             stack.Push(1);
             stack.Push(2);

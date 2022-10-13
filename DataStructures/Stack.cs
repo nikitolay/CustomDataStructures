@@ -34,7 +34,7 @@ namespace DataStructures
 
 
         public T this[int i] => items[i];
-
+        public int  Length => items.Length;
 
 
 

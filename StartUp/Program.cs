@@ -18,11 +18,15 @@ namespace StartUp
             stack.Push(4);
 
             stack.Push(5);
+
             foreach (var item in stack)
             {
                 Console.WriteLine(item);
             }
             Console.WriteLine(stack[2]);
+            Console.WriteLine();
+            Console.WriteLine(stack.Count);
+            Console.WriteLine(stack.Length);
         }
     }
 }

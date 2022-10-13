@@ -22,8 +22,11 @@ namespace DataStructures
 
         public Stack(int capacity)
         {
+            CheckCapacityForNegativeNumber(capacity);
             items = new T[capacity];
         }
+
+      
 
         public Stack(IEnumerable<T> collection)
         {
@@ -32,9 +35,6 @@ namespace DataStructures
         }
 
 
-
-        public T this[int i] => items[i];
-        public int  Length => items.Length;
 
 
 
@@ -50,7 +50,13 @@ namespace DataStructures
             items[Count++] = element;
         }
 
-        public T Peek() => items[Count - 1];
+        public T Peek()
+        {
+            CheckForEmptyStack();
+
+            return items[Count - 1];
+        }
+
 
         public bool Contains(T element) => items.Contains(element);
 
@@ -71,10 +77,8 @@ namespace DataStructures
         public T Pop()
         {
 
-            if (Count==0)
-            {
-                throw new InvalidOperationException("Stack empty.");
-            }
+            CheckForEmptyStack();
+
 
             T element = items[Count - 1];
             Count--;
@@ -87,6 +91,8 @@ namespace DataStructures
 
         public void TrimExcess()
         {
+            CheckForEmptyStack();
+
             int num = (int)(items.Length * 0.9);
             if (Count >= num)
             {
@@ -104,6 +110,8 @@ namespace DataStructures
                 items = copyItems;
             }
         }
+
+
         private void Shrink()
         {
             T[] copyItems = new T[items.Length / 2];
@@ -127,6 +135,23 @@ namespace DataStructures
             //items=copyItems;
         }
 
+        private void CheckForEmptyStack()
+        {
+            if (Count == 0)
+            {
+                throw new InvalidOperationException("Stack empty.");
+            }
+
+        }
+        private static void CheckCapacityForNegativeNumber(int capacity)
+        {
+            if (capacity < 0)
+            {
+
+                throw new ArgumentOutOfRangeException(
+                    "capacity", capacity, "Non-negative number required.");
+            }
+        }
         public IEnumerator<T> GetEnumerator()
         {
 

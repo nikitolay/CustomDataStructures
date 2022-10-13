@@ -6,9 +6,10 @@ namespace StartUp
     {
         static void Main(string[] args)
         {
-            DataStructures.Stack<int> stack = new DataStructures.Stack<int>();
-           Stack<int> stack2 = new Stack<int>();
-            stack.Pop();
+            DataStructures.Stack<int> stack = new DataStructures.Stack<int>(-9);
+           Stack<int> stack2 = new Stack<int>(9);
+            stack2.Push(1);
+            stack2.Clear();
             stack2.Push(6);
             stack2.TrimExcess();
             //stack.Push((int)Enumerable.Range(10,50));
@@ -18,15 +19,14 @@ namespace StartUp
             stack.Push(4);
 
             stack.Push(5);
+            for (int i = 0; i < stack2.Count; i++)
+            {
 
-            foreach (var item in stack)
+            }
+            foreach (var item in stack2)
             {
                 Console.WriteLine(item);
             }
-            Console.WriteLine(stack[2]);
-            Console.WriteLine();
-            Console.WriteLine(stack.Count);
-            Console.WriteLine(stack.Length);
         }
     }
 }

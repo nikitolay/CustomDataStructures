@@ -8,7 +8,7 @@ namespace StartUp
         {
             DataStructures.Stack<int> stack = new DataStructures.Stack<int>();
            Stack<int> stack2 = new Stack<int>();
-            stack2.Push(1);
+            stack.Pop();
             stack2.Push(6);
             stack2.TrimExcess();
             //stack.Push((int)Enumerable.Range(10,50));

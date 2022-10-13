@@ -71,6 +71,11 @@ namespace DataStructures
         public T Pop()
         {
 
+            if (Count==0)
+            {
+                throw new InvalidOperationException("Stack empty.");
+            }
+
             T element = items[Count - 1];
             Count--;
             if (Count <= items.Length / 4)

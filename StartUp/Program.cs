@@ -6,8 +6,13 @@ namespace StartUp
     {
         static void Main(string[] args)
         {
-            DataStructures.Stack<int> stack = new DataStructures.Stack<int>(-9);
+            
+            DataStructures.Stack<int> stack = new DataStructures.Stack<int>(9);
+            DataStructures.Stack<int> stack1 = new DataStructures.Stack<int>(9);
            Stack<int> stack2 = new Stack<int>(9);
+           Stack<int> stack3 = new Stack<int>(9);
+            Console.WriteLine(stack2==stack3);
+            Console.WriteLine(stack==stack1);
             stack2.Push(1);
             stack2.Clear();
             stack2.Push(6);

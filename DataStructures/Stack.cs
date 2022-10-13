@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace DataStructures
 {
-    public class Stack<T> : IEnumerable<T>, IEnumerable
+    public class Stack<T> : IEnumerable<T>
     {
         private const int INITIAL_CAPACITY = 4;
         private T[] items;

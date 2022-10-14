@@ -18,24 +18,17 @@ namespace DataStructures
             items = new T[INITIAL_CAPACITY];
         }
 
-
-
         public Stack(int capacity)
         {
             CheckCapacityForNegativeNumber(capacity);
             items = new T[capacity];
         }
 
-      
-
         public Stack(IEnumerable<T> collection)
         {
             //TODO: check if given to reference
             items = collection.ToArray();
         }
-
-
-
 
 
         public int Count { get; private set; }
@@ -60,6 +53,7 @@ namespace DataStructures
 
         public bool Contains(T element) => items.Contains(element);
 
+
         public void Clear()
         {
             items = new T[INITIAL_CAPACITY];
@@ -74,6 +68,7 @@ namespace DataStructures
             }
             return array;
         }
+
         public T Pop()
         {
 
@@ -141,20 +136,20 @@ namespace DataStructures
             {
                 throw new InvalidOperationException("Stack empty.");
             }
-
         }
+
         private static void CheckCapacityForNegativeNumber(int capacity)
         {
             if (capacity < 0)
             {
-
                 throw new ArgumentOutOfRangeException(
                     "capacity", capacity, "Non-negative number required.");
             }
         }
+
+
         public IEnumerator<T> GetEnumerator()
         {
-
             for (int i = Count - 1; i >= 0; i--)
             {
                 yield return items[i];

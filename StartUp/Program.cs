@@ -20,7 +20,10 @@ namespace StartUp
                 Console.WriteLine(node.Value);
                 node = node.Next;
             }
-
+            foreach (var item in stack)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }

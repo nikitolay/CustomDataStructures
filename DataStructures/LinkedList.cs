@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataStructures
 {
-    public class LinkedList<T>
+    public class LinkedList<T>:IEnumerable<T>
     {
         public Node<T> Head { get; set; }
 
@@ -28,6 +29,7 @@ namespace DataStructures
                 itemNode.Next = Head;
                 Head = itemNode;
             }
+            Count++;
         }
         public void AddFirst(T item)
         {
@@ -42,6 +44,7 @@ namespace DataStructures
                 node.Next = Head;
                 Head = node;
             }
+            Count++;
         }
         public void AddLast(T item)
         {
@@ -56,6 +59,7 @@ namespace DataStructures
                 Last.Next = node;
                 Last=node;
             }
+            Count++;
         }
         public void AddLast(Node<T> itemNode)
         {
@@ -69,7 +73,22 @@ namespace DataStructures
                 Last.Next = itemNode;
                 Last = itemNode;
             }
+            Count++;
         }
 
+        public IEnumerator<T> GetEnumerator()
+        {
+            Node<T> node=Head;
+            while (node != null)
+            {
+                yield return node.Value;
+                node = node.Next;
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+           return GetEnumerator();
+        }
     }
 }

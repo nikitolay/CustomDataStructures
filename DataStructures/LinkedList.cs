@@ -132,6 +132,15 @@ namespace DataStructures
             AddAfterLogic(node, newNode);
         }
 
+        public void AddAfter(Node<T> node, Node<T> newNode)
+        {
+            //TODO: Throw Exception
+            if (!Contains(node))
+            {
+            }
+            AddAfterLogic(node, newNode);
+        }
+
         public void Clear()
         {
             Head = null;
@@ -214,7 +223,6 @@ namespace DataStructures
         private void AddAfterLogic(Node<T> node, Node<T> newNode)
         {
             Node<T> currentNode = Head;
-
 
             while (currentNode != null)
             {

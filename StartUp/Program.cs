@@ -17,7 +17,8 @@ namespace StartUp
             stack.AddLast(6);
             stack.AddLast(7);
             stack.AddLast(8);
-            
+            stack.Clear();
+            Console.WriteLine(stack.Count);
             foreach (var item in stack)
             {
                 Console.WriteLine(item);

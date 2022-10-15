@@ -86,6 +86,12 @@ namespace DataStructures
             }
             Count++;
         }
+        public void Clear()
+        {
+            Head = null;
+            Last = null;
+            Count = 0;
+        }
 
         public IEnumerator<T> GetEnumerator()
         {

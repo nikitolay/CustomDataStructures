@@ -29,9 +29,23 @@ namespace DataStructures
 
         public Node<T> Last { get; set; }
 
-        public int Count { get; set; }
 
-
+        public int Count
+        {
+            get
+            {
+                int count = 0;
+                Node<T> node = Head;
+                while (node!=null)
+                {
+                    count++;
+                    node= node.Next;
+                }
+                return count;
+            }
+          //  private set { Count = value; }
+        }
+    
         public void AddFirst(Node<T> itemNode)
         {
             itemNode.Next = Head;
@@ -42,7 +56,6 @@ namespace DataStructures
 
             Head = itemNode;
 
-            Count++;
         }
         public void AddFirst(T item)
         {
@@ -55,7 +68,6 @@ namespace DataStructures
 
             Head = node;
 
-            Count++;
         }
         public void AddLast(T item)
         {
@@ -70,7 +82,6 @@ namespace DataStructures
                 Last.Next = node;
                 Last = node;
             }
-            Count++;
         }
         public void AddLast(Node<T> itemNode)
         {
@@ -84,13 +95,12 @@ namespace DataStructures
                 Last.Next = itemNode;
                 Last = itemNode;
             }
-            Count++;
         }
         public void Clear()
         {
             Head = null;
             Last = null;
-            Count = 0;
+           // Count = 0;
         }
 
         public IEnumerator<T> GetEnumerator()

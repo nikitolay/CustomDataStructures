@@ -43,7 +43,6 @@ namespace DataStructures
                 }
                 return count;
             }
-          //  private set { Count = value; }
         }
     
         public void AddFirst(Node<T> itemNode)
@@ -100,7 +99,19 @@ namespace DataStructures
         {
             Head = null;
             Last = null;
-           // Count = 0;
+        }
+        //public bool Contains(T item)
+        //{
+
+        //}
+        public void ForEach(Action<T> action)
+        {
+            Node<T> node = Head;
+            while (node!=null)
+            {
+                action(node.Value);
+                node = node.Next;
+            }
         }
 
         public IEnumerator<T> GetEnumerator()

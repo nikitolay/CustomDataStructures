@@ -18,7 +18,7 @@ namespace StartUp
             stack.AddLast(node);
             stack.AddLast(6);
             stack.AddLast(7);
-            stack.AddBefore(node,node2);
+            stack.AddAfter(node,156+5);
          //  stack.Clear();
            // Console.WriteLine(stack.Count);
             Console.WriteLine();

@@ -105,39 +105,32 @@ namespace DataStructures
 
             Node<T> currentNode = Head;
 
-            //if our element(node) is the head
-            if (node == Head)
-            {
-                newNode.Next = Head;
-                Head = newNode;
-            }
-            else
-            {
-                while (currentNode != null)
-                {
-                    //if the current next is equal to ours element(node)
-                    if (currentNode.Next.Value.Equals(node.Value))
-                    {
-
-                        currentNode.Next = newNode;
-                        newNode.Next = node;
-                        return;
-                    }
-                    else
-                    {
-                        currentNode = currentNode.Next;
-                    }
-                }
-
-            }
-
-
+            AddBeforeLogic(node, newNode);
 
         }
 
 
+        public void AddBefore(Node<T> node, T item)
+        {
+            //TODO: Throw Exception
+            if (!Contains(node))
+            {
+            }
+            Node<T> newNode = new Node<T>(item);
 
+            AddBeforeLogic(node, newNode);
+        }
 
+        public void AddAfter(Node<T> node, T item)
+        {
+            //TODO: Throw Exception
+            if (!Contains(node))
+            {
+            }
+            Node<T> newNode = new Node<T>(item);
+
+            AddAfterLogic(node, newNode);
+        }
 
         public void Clear()
         {
@@ -188,7 +181,58 @@ namespace DataStructures
             return GetEnumerator();
         }
 
+        private void AddBeforeLogic(Node<T> node, Node<T> newNode)
+        {
+            Node<T> currentNode = Head;
 
+            //if our element(node) is the head
+            if (node == Head)
+            {
+                newNode.Next = Head;
+                Head = newNode;
+            }
+            else
+            {
+                while (currentNode != null)
+                {
+                    //if the current next is equal to ours element(node)
+                    if (currentNode.Next.Value.Equals(node.Value))
+                    {
+
+                        currentNode.Next = newNode;
+                        newNode.Next = node;
+                        return;
+                    }
+                    else
+                    {
+                        currentNode = currentNode.Next;
+                    }
+                }
+            }
+        }
+
+        private void AddAfterLogic(Node<T> node, Node<T> newNode)
+        {
+            Node<T> currentNode = Head;
+
+
+            while (currentNode != null)
+            {
+                //if the current is equal to ours element(node)
+                if (currentNode.Value.Equals(node.Value))
+                {
+                    //of the new element's next is equal to the next of the current node
+                    newNode.Next = currentNode.Next;
+                    currentNode.Next = newNode;
+                    return;
+                }
+                else
+                {
+                    currentNode = currentNode.Next;
+                }
+            }
+
+        }
         private static bool ContainsLogic(ref Node<T> item)
         {
             while (item != null)

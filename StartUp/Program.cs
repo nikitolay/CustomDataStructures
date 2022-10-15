@@ -20,6 +20,7 @@ namespace StartUp
          //  stack.Clear();
             Console.WriteLine(stack.Count);
             Console.WriteLine();
+            Console.WriteLine(stack.Contains(8));
             stack.ForEach(x => Console.WriteLine(x));
 
         }

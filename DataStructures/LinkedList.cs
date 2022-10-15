@@ -100,10 +100,19 @@ namespace DataStructures
             Head = null;
             Last = null;
         }
-        //public bool Contains(T item)
-        //{
-
-        //}
+        public bool Contains(T item)
+        {
+            Node<T> node = Head;
+            while (node!=null)
+            {
+                if (node.Value.Equals(item))
+                {
+                    return true;
+                }
+                node = node.Next;
+            }
+            return false;
+        }
         public void ForEach(Action<T> action)
         {
             Node<T> node = Head;

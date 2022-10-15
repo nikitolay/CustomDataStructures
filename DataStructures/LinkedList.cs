@@ -45,15 +45,15 @@ namespace DataStructures
             }
         }
     
-        public void AddFirst(Node<T> itemNode)
+        public void AddFirst(Node<T> item)
         {
-            itemNode.Next = Head;
+            item.Next = Head;
             if (Head == null)
             {
-                Last = itemNode;
+                Last = item;
             }
 
-            Head = itemNode;
+            Head = item;
 
         }
         public void AddFirst(T item)
@@ -82,19 +82,22 @@ namespace DataStructures
                 Last = node;
             }
         }
-        public void AddLast(Node<T> itemNode)
+        public void AddLast(Node<T> item)
         {
             if (Last == null)
             {
-                Last = itemNode;
-                Head = itemNode;
+                Last = item;
+                Head = item;
             }
             else
             {
-                Last.Next = itemNode;
-                Last = itemNode;
+                Last.Next = item;
+                Last = item;
             }
         }
+
+        public void AddBefore(Node<T> itemNode, Node<T> itemNode)
+
         public void Clear()
         {
             Head = null;

@@ -9,17 +9,15 @@ namespace StartUp
         static void Main(string[] args)
         {
             
-            DataStructures.LinkedList<int>stack = new DataStructures.LinkedList<int>();
-            stack.AddFirst(5);
-            stack.AddFirst(6);
-            stack.AddFirst(7);
-            stack.AddFirst(8);
-            Node<int> node=stack.Head;
-            while (node!=null)
-            {
-                Console.WriteLine(node.Value);
-                node = node.Next;
-            }
+            int[] arr=new int[4] {2,5,4,7 };
+            List<int> list=new List<int>(arr);
+            DataStructures.LinkedList<int>stack = new DataStructures.LinkedList<int>(list);
+
+            stack.AddLast(5);
+            stack.AddLast(6);
+            stack.AddLast(7);
+            stack.AddLast(8);
+            
             foreach (var item in stack)
             {
                 Console.WriteLine(item);

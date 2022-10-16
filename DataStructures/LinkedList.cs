@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DataStructures
 {
@@ -47,27 +48,19 @@ namespace DataStructures
 
         public void AddFirst(Node<T> item)
         {
-            item.Next = Head;
-            if (Head == null)
-            {
-                Last = item;
-            }
+            AddFirstLogic(item);
 
-            Head = item;
 
         }
         public void AddFirst(T item)
         {
             Node<T> node = new Node<T>(item);
-            node.Next = Head;
-            if (Head == null)
-            {
-                Last = node;
-            }
-
-            Head = node;
+            AddFirstLogic(node);
 
         }
+
+
+
         public void AddLast(T item)
         {
             Node<T> node = new Node<T>(item);
@@ -149,8 +142,7 @@ namespace DataStructures
             }
             if (Head == Last)
             {
-                Last = null;
-                Head = null;
+                Clear();
             }
             Head = Head.Next;
         }
@@ -163,8 +155,7 @@ namespace DataStructures
             }
             if (Last == Head)
             {
-                Last = null;
-                Head = null;
+                Clear();
                 return;
             }
             Node<T> current = Head;
@@ -228,7 +219,15 @@ namespace DataStructures
         {
             return GetEnumerator();
         }
-
+        private void AddFirstLogic(Node<T> node)
+        {
+            node.Next = Head;
+            if (Head == null)
+            {
+                Last = node;
+            }
+            Head = node;
+        }
         private void AddBeforeLogic(Node<T> node, Node<T> newNode)
         {
             //TODO: Throw Exception

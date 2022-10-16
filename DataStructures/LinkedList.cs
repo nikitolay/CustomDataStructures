@@ -64,30 +64,15 @@ namespace DataStructures
         public void AddLast(T item)
         {
             Node<T> node = new Node<T>(item);
-            if (Last == null)
-            {
-                Last = node;
-                Head = node;
-            }
-            else
-            {
-                Last.Next = node;
-                Last = node;
-            }
+            AddLastLogic(node);
+
         }
         public void AddLast(Node<T> item)
         {
-            if (Last == null)
-            {
-                Last = item;
-                Head = item;
-            }
-            else
-            {
-                Last.Next = item;
-                Last = item;
-            }
+            AddLastLogic(item);
         }
+
+
 
         public void AddBefore(Node<T> node, Node<T> newNode)
         {
@@ -143,6 +128,7 @@ namespace DataStructures
             if (Head == Last)
             {
                 Clear();
+                return;
             }
             Head = Head.Next;
         }
@@ -181,7 +167,7 @@ namespace DataStructures
 
         public bool Contains(T item)
         {
-            Node<T> node = Head;
+            Node<T> node = new Node<T>(item);
 
             return ContainsLogic(ref node);
         }
@@ -286,6 +272,19 @@ namespace DataStructures
                 }
             }
 
+        }
+        private void AddLastLogic(Node<T> item)
+        {
+            if (Last == null)
+            {
+                Last = item;
+                Head = item;
+            }
+            else
+            {
+                Last.Next = item;
+                Last = item;
+            }
         }
         private void RemoveLogic(Node<T> node)
         {

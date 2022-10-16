@@ -4,16 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStructures
+namespace DataStructures.SinglyLinkedList
 {
     public class Node<T>
     {
         public Node(T value)
         {
             Value = value;
+            Next = null;
         }
 
         public T Value { get; set; }
-        public Node<T> Next;
+        public Node<T>? Next;
     }
 }

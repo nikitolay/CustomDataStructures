@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace DataStructures
+namespace DataStructures.SinglyLinkedList
 {
     public class LinkedList<T> : IEnumerable<T>
     {

@@ -1,6 +1,4 @@
-﻿
-
-using DataStructures;
+﻿using DataStructures.SinglyLinkedList;
 
 namespace StartUp
 {
@@ -11,7 +9,7 @@ namespace StartUp
             
             int[] arr=new int[4] {2,5,4,7 };
             List<int> list=new List<int>(arr);
-            DataStructures.LinkedList<int>stack = new DataStructures.LinkedList<int>(list);
+            DataStructures.SinglyLinkedList.LinkedList<int>stack = new DataStructures.SinglyLinkedList.LinkedList<int>(list);
             Node<int> node = new Node<int>(55);
             Node<int> node2 = new Node<int>(525);
             stack.AddLast(5);

@@ -140,8 +140,46 @@ namespace DataStructures
             RemoveLogic(node);
 
         }
-       
+        public void RemoveFirst()
+        {
+            //if first is null, throw new exception
+            if (true)
+            {
 
+            }
+            if (Head == Last)
+            {
+                Last = null;
+                Head = null;
+            }
+            Head = Head.Next;
+        }
+        public void RemoveLast()
+        {
+            //if list is empty, or last is null, throw new exception
+            if (true)
+            {
+
+            }
+            if (Last == Head)
+            {
+                Last = null;
+                Head = null;
+                return;
+            }
+            Node<T> current = Head;
+            while (current != null)
+            {
+                if (current.Next == Last)
+                {
+                    Last = current;
+                    current.Next = null;
+
+                    return;
+                }
+                current = current.Next;
+            }
+        }
         public void Clear()
         {
             Head = null;

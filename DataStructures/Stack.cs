@@ -28,6 +28,7 @@ namespace DataStructures
         {
             //TODO: check if given to reference
             items = collection.ToArray();
+            Count=items.Length;
         }
 
 

@@ -7,22 +7,24 @@ namespace StartUp
         static void Main(string[] args)
         {
             
-            int[] arr=new int[4] {2,5,4,7 };
+            int[] arr=new int[5] {2,5,4,7,8 };
             List<int> list=new List<int>(arr);
-            DataStructures.SinglyLinkedList.LinkedList<int>stack = new DataStructures.SinglyLinkedList.LinkedList<int>(list);
-            Node<int> node = new Node<int>(55);
-            Node<int> node2 = new Node<int>(525);
-            stack.AddLast(5);
-            stack.AddLast(node);
-            stack.AddLast(6);
-            stack.AddLast(7);
-            stack.AddAfter(node,node2);
-         //  stack.Clear();
-           // Console.WriteLine(stack.Count);
-            Console.WriteLine();
-            Console.WriteLine();
+            DataStructures.Queue<int>queue = new DataStructures.Queue<int>(list);
+            DataStructures.Stack<int>stack = new DataStructures.Stack<int>(list);
+            queue.Dequeue();
+            foreach (var item in queue)
+            {
 
-            stack.ForEach(x => Console.WriteLine(x));
+            Console.WriteLine(item);
+            }
+            Console.WriteLine();
+            Console.WriteLine(queue.Count);
+            Console.WriteLine();
+            foreach (var item in stack)
+            {
+
+                Console.WriteLine(item);
+            }
 
         }
     }

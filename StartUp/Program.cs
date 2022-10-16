@@ -23,6 +23,7 @@ namespace StartUp
            // Console.WriteLine(stack.Count);
             Console.WriteLine();
             Console.WriteLine();
+            stack.Remove(node2);
             stack.ForEach(x => Console.WriteLine(x));
 
         }

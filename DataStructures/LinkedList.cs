@@ -98,10 +98,7 @@ namespace DataStructures
 
         public void AddBefore(Node<T> node, Node<T> newNode)
         {
-            //TODO: Throw Exception
-            if (!Contains(node))
-            {
-            }
+
 
             Node<T> currentNode = Head;
 
@@ -112,10 +109,7 @@ namespace DataStructures
 
         public void AddBefore(Node<T> node, T item)
         {
-            //TODO: Throw Exception
-            if (!Contains(node))
-            {
-            }
+
             Node<T> newNode = new Node<T>(item);
 
             AddBeforeLogic(node, newNode);
@@ -123,10 +117,7 @@ namespace DataStructures
 
         public void AddAfter(Node<T> node, T item)
         {
-            //TODO: Throw Exception
-            if (!Contains(node))
-            {
-            }
+
             Node<T> newNode = new Node<T>(item);
 
             AddAfterLogic(node, newNode);
@@ -134,12 +125,22 @@ namespace DataStructures
 
         public void AddAfter(Node<T> node, Node<T> newNode)
         {
-            //TODO: Throw Exception
-            if (!Contains(node))
-            {
-            }
+
             AddAfterLogic(node, newNode);
         }
+
+        public void Remove(Node<T> node)
+        {
+            RemoveLogic(node);
+
+        }
+        public void Remove(T item)
+        {
+            Node<T> node = new Node<T>(item);
+            RemoveLogic(node);
+
+        }
+       
 
         public void Clear()
         {
@@ -192,6 +193,10 @@ namespace DataStructures
 
         private void AddBeforeLogic(Node<T> node, Node<T> newNode)
         {
+            //TODO: Throw Exception
+            if (!Contains(node))
+            {
+            }
             Node<T> currentNode = Head;
 
             //if our element(node) is the head
@@ -222,6 +227,10 @@ namespace DataStructures
 
         private void AddAfterLogic(Node<T> node, Node<T> newNode)
         {
+            //TODO: Throw Exception
+            if (!Contains(node))
+            {
+            }
             Node<T> currentNode = Head;
 
             while (currentNode != null)
@@ -240,6 +249,29 @@ namespace DataStructures
                 }
             }
 
+        }
+        private void RemoveLogic(Node<T> node)
+        {
+            //TODO: Throw Exception
+            if (!Contains(node))
+            {
+            }
+
+            if (node == Head)
+            {
+                Head = Head.Next;
+                return;
+            }
+            Node<T> currentNode = Head;
+            while (currentNode != null)
+            {
+                if (currentNode.Next == node)
+                {
+                    currentNode.Next = currentNode.Next.Next;
+                    return;
+                }
+                currentNode = currentNode.Next;
+            }
         }
         private static bool ContainsLogic(ref Node<T> item)
         {

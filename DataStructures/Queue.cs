@@ -37,34 +37,29 @@ namespace DataStructures
         
         public void Enqueue(T element)
         {
-            //TODO: check if element is first
-            for (int i = Count ; i >= 1; i--)
-            {
-                items[i] = items[i - 1];
-            }
-            items[0]=element;
-            Count++;
+            
+            items[Count++]=element;
 
         }
         public T Dequeue()
         {
-            T element=items[Count-1];
-            //for (int i = 0; i < Count-1; i++)
-            //{
-            //    items[i] = items[i + 1];
-            //}
+            T element=items[0];
+            for (int i = 0; i < Count - 1; i++)
+            {
+                items[i] = items[i + 1];
+            }
             Count--;
             return element;
         }
 
         public IEnumerator<T> GetEnumerator()
         {
-            
-            for (int i = Count - 1; i >= 0; i--)
+            for (int i = 0; i < Count; i++)
             {
-                yield return items[i];
 
+                yield return items[i];
             }
+
         }
 
         IEnumerator IEnumerable.GetEnumerator()

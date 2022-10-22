@@ -17,6 +17,9 @@ namespace StartUp
             queue.Dequeue();
             queue2.Dequeue();
             queue2.Dequeue();
+
+            queue.Enqueue(115);
+            queue2.Enqueue(115);
             foreach (var item in queue)
             {
                 Console.WriteLine(item);

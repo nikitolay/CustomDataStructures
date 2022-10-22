@@ -1,5 +1,6 @@
 ﻿using DataStructures.SinglyLinkedList;
-
+using DataStructures;
+using System.Collections.Generic;
 namespace StartUp
 {
     internal class Program
@@ -8,19 +9,24 @@ namespace StartUp
         {
             
             int[] arr=new int[5] {2,5,4,7,8 };
-            List<int> list=new List<int>(arr);
-            DataStructures.Queue<int>queue = new DataStructures.Queue<int>(list);
-            DataStructures.Stack<int>stack = new DataStructures.Stack<int>(list);
+           DataStructures.Queuee<int>queue = new DataStructures.Queuee<int>(arr);
+           Queue<int>queue2 = new Queue<int>(arr);
+
+
             queue.Dequeue();
+            queue.Dequeue();
+            queue2.Dequeue();
+            queue2.Dequeue();
             foreach (var item in queue)
             {
-
-            Console.WriteLine(item);
+                Console.WriteLine(item);
             }
+            
+
+
             Console.WriteLine();
-            Console.WriteLine(queue.Count);
             Console.WriteLine();
-            foreach (var item in stack)
+            foreach (var item in queue2)
             {
 
                 Console.WriteLine(item);

@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 
 namespace DataStructures
 {
-    public class Queue<T>:IEnumerable<T>
+    public class Queuee<T>:IEnumerable<T>
     {
         private const int INITIAL_CAPACITY = 4;
         private T[] items;
-        public Queue()
+        public Queuee()
         {
 
         }
-        public Queue(int capacity)
+        public Queuee(int capacity)
         {
             items=new T[capacity];
         }
-        public Queue(IEnumerable<T> elements)
+        public Queuee(IEnumerable<T> elements)
         {
             items = elements.ToArray();
             Count = items.Length;
@@ -37,6 +37,7 @@ namespace DataStructures
         
         public void Enqueue(T element)
         {
+            //TODO: check if element is first
             for (int i = Count ; i >= 1; i--)
             {
                 items[i] = items[i - 1];
@@ -48,19 +49,21 @@ namespace DataStructures
         public T Dequeue()
         {
             T element=items[Count-1];
-            for (int i = 0; i < Count-1; i++)
-            {
-                items[i] = items[i + 1];
-            }
+            //for (int i = 0; i < Count-1; i++)
+            //{
+            //    items[i] = items[i + 1];
+            //}
             Count--;
             return element;
         }
 
         public IEnumerator<T> GetEnumerator()
         {
-            for (int i = 0; i < Count; i++)
+            
+            for (int i = Count - 1; i >= 0; i--)
             {
                 yield return items[i];
+
             }
         }
 
